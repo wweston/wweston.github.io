@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(-45deg, #ffffff, #d4d4d4, #d1d1d1, #b8b1b1);
+    background: linear-gradient(-45deg, #b362b6, #fa7171, #c3ff8b, #2e46cc);
 	  background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     display: flexbox;
@@ -100,18 +100,18 @@ p{
   }
 
   .path {
-  stroke-dasharray: 100;
-  animation: dash 20s ease infinite;
+  stroke-dasharray: 400 10 10 100;
+  animation: dash 50s infinite;
   fill: #ffffff00;
-  stroke: #a39393;
-  stroke-width:70;
+  stroke: #ffeb7b;
+  stroke-width:20;
   stroke-linecap:round;
   stroke-linejoin:round;
   stroke-miterlimit:100;
   position: fixed;
   margin: -50%;
-  height: 200%;
-  width: 200%;
+  height: 150%;
+  width: 150%;
   z-index: -1000;
   filter: url(#blur);
 
@@ -120,5 +120,6 @@ p{
 @keyframes dash {
   to {
     stroke-dashoffset: 1000;
+    animation-direction: alternate;
   }
 }
