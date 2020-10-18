@@ -60,7 +60,7 @@ p{
 }
 
 .blurry-text {
-    text-shadow: 0 0 32px white;
+    text-shadow: 0 0 .5em white;
     color: transparent;
  }
 
