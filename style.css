@@ -1,6 +1,6 @@
 body {
-    background: linear-gradient(-45deg, #4e327a, #ffa9ca, #ad99f5, #77ffdf);
-	background-size: 400% 400%;
+    background: linear-gradient(-45deg, #ffffff, #d4d4d4, #d1d1d1, #b8b1b1);
+	  background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     display: flexbox;
     margin: 1em;
@@ -24,7 +24,7 @@ h1{
     font-size: 5em;
     font-family: serif;
     background-color: #0ff;
-    background-image: linear-gradient(-180deg, #e8e0f5, #ecc8d6, #ffc3c3, #c9f8ed);
+    background-image: linear-gradient(-180deg, #252327, #3f3a3c, #1a1717, #333534);
     animation: gradient 1s ease infinite;
     background-size: 100%;
     -webkit-background-clip: text;
@@ -65,6 +65,7 @@ p{
  }
 
 .icon{
+    display: flex;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1em;
@@ -73,14 +74,16 @@ p{
     height: 10%;
     width: 33%;
     fill: url(#linearGradient); 
-    transition: fill .5s;
+    transition: fill 2s;
     -box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
 .icon:hover{
-    fill: rgba(255, 203, 235, 0) !important;
-    stroke: honeydew;
-    stroke-width: .1em;
+    fill: rgb(203, 255, 255) !important;
+    transition: fill 2s;
+    animation: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    -stroke: honeydew;
+    -stroke-width: .1em;
     -box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -95,3 +98,27 @@ p{
     height: 10%;
     width: 33%;
   }
+
+  .path {
+  stroke-dasharray: 100;
+  animation: dash 20s ease infinite;
+  fill: #ffffff00;
+  stroke: #a39393;
+  stroke-width:70;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit:100;
+  position: fixed;
+  margin: -50%;
+  height: 200%;
+  width: 200%;
+  z-index: -1000;
+  filter: url(#blur);
+
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
