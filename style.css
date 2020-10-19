@@ -1,9 +1,10 @@
 body {
-    background: linear-gradient(-45deg, #b362b6, #fa7171, #c3ff8b, #2e46cc);
+    background: linear-gradient(-45deg, #eeaeca, #94bbe9, #eeaeca, #2e46cc);
 	  background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     display: flexbox;
     margin: 1em;
+    overflow-x: hidden;
   }
 
   @keyframes gradient {
@@ -35,7 +36,7 @@ h1{
   }
   
 h2{
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     text-align: center;
     font-family: serif;
     color: azure;
@@ -100,8 +101,9 @@ p{
   }
 
   .path {
-  stroke-dasharray: 400 10 10 100;
-  animation: dash 50s infinite;
+  stroke-dasharray: 100,6000,0,1000;
+  animation: dash 20s infinite;
+  animation-direction: alternate;
   fill: #ffffff00;
   stroke: #ffeb7b;
   stroke-width:20;
@@ -113,13 +115,22 @@ p{
   height: 150%;
   width: 150%;
   z-index: -1000;
-  filter: url(#blur);
+  -filter: url(#blur);
 
 }
 
 @keyframes dash {
   to {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 10000;
     animation-direction: alternate;
+    animation: infinite;
   }
+}
+
+.project{
+  margin: 1em;
+  height: 10%;
+  width: 30%;
+  display: flex !important;
+  border-radius: 1em;
 }
