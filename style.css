@@ -112,6 +112,7 @@ p{
   display: flex;
 }
 .icon{
+    filter:url(#shadow);
     margin-top: -8em;
     margin-bottom: 4em;
     margin-left: 1em;
@@ -119,14 +120,15 @@ p{
     
     -height: 10%;
     
-    fill: url(#linearGradient); 
+    fill: #ffeb7b;
     transition: fill 2s;
     -box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
 .icon:hover{
-    fill: rgb(203, 255, 255) !important;
-    transition: fill 2s;
+    fill: url(#linearGradient); 
+    
+    transition: fill 5s ease-in-out !important;
     animation: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
     -stroke: honeydew;
     -stroke-width: .1em;
@@ -135,7 +137,8 @@ p{
 
 .path-container{
 z-index: -5000 !important;
-
+position: sticky !important;
+top: 400px;
 }
 
   .path {
@@ -148,10 +151,11 @@ z-index: -5000 !important;
   stroke-linecap:round;
   stroke-linejoin:round;
   stroke-miterlimit:100;
+  
   margin: -50%;
   height: 150%;
   width: 150%;
-  z-index: -250;
+  z-index: -250 !important;
   -filter: url(#blur);
 
 }
